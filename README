@@ -1,0 +1,66 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+#  validator.js v.pre
+#  - Simple client-side validation.
+#
+#  Copyright (C) 2010 Adrian Fraiha
+#  Licensed under GPLv3 (http://gnu.org/licenses/gpl.html)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+          TABLE OF CONTENTS
+---------------------------------------------------------------------
+I.    Usage
+
+II.   Options
+
+III.  Todo
+
+IV.   Contributers/Contributing
+
+
+
+I.        USAGE
+---------------------------------------------------------------------
+<script type="text/javascript" src="validator.js"></script>
+<script type="text/javascript">
+  var validator = new Validator({
+    field_id : {required:true} //see OPTIONS for more details.
+  });
+  var submit = function() {
+    validator.removeErrors(); //removes all error messages.
+    if(validator.validate()) {
+      //all fields validated, do something.
+    }
+  }
+</script>
+
+SEE example.htm
+
+
+
+II.       OPTIONS
+---------------------------------------------------------------------
+required : true, //Default error message "This field is required"
+
+contains : {data: [ele1,ele2,ele3],
+            message: 'Field does not contain data'}
+
+custom   : {regex : /^.*$/, 
+            message : 'Field not valid.'}
+
+
+
+III.      TODO
+---------------------------------------------------------------------
+- Better error message support.
+- More options.
+
+
+
+IV.       Contributers/Contributing
+---------------------------------------------------------------------
+validator.js is developed by aef (aef@catch-colt.com).
+Originally developed on Oct 10 2010.
+
+To contribute visit http://github.com/aef-/validator.js.
